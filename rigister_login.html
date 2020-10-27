@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rigister and login</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="rigister_login.js"></script>
+    <link rel="stylesheet" href="rigister_login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="imgdiv">
+            <img src="img/company.jpg" alt="company" id="img" class="col-sm-6">
+        </div>
+        <div class="row" id="navbar">
+            <button class="btn btn-primary col-sm-3" onclick="rigister_block()">Rigister</button>
+            <button class="btn btn-primary col-sm-3" onclick="login_block()">Sing in</button>
+        </div>
+        <div class="row">
+            <form action="example.php" id="rigisterForm" autocomplete="on" target="_blanck" method="POST">
+
+                <h2 class="col-sm-12">Rigister</h2>
+
+
+                <input type="text" name="userName" placeholder="user name" id="username" class="input col-sm-6"><br>
+
+                <input type="text" name="email" placeholder="email" id="email" class="input col-sm-6"><br>
+                <p id="emailerror" class="error col-sm-12">The entered email is not correct</p>
+
+                <input type="password" name="password" placeholder="password" id="password1" class="input col-sm-6"><br>
+
+                <input type="password" placeholder="enter password" id="enterpassword" class="input col-sm-6"><br>
+                <p id="passworderror" class="error col-sm-12">Password does not match</p>
+                <input type="text" id="captchatext1" readonly class="output col-sm-6"><br>
+                <input type="button" class="btn btn-warning  col-sm-3" onclick="create_captcha()" value="Refresh"><br>
+
+                <input type="text" placeholder="enter captcha" id="entercaptch1" class="input  col-sm-6"><br>
+                <p id="captchaerror1" class="error  col-sm-12">The code entered is incorrect</p>
+
+
+
+
+                <input type="button" class="btn btn-primary  col-sm-3" onclick="login_block()" value="Login">
+                <input type="button" class="btn btn-success  col-sm-3" onclick="rigister()" value="Rigister"><br>
+                <input type="button" class="btn btn-danger  col-sm-3" onclick="cancel()" value="Cancel">
+            </form>
+        </div>
+        <div class="jumbotron text-center row" id="rigisterres">
+            <h1 class="col-sm-12">Your information was recorded</h1>
+        </div>
+        <div class="row">
+            <form action="example.php" id="loginForm" method="POST" autocomplete="on" target="_blanck">
+                <h2 class="col-sm-12">Login</h2>
+
+                <input type="text" name="userNameOrEmail" placeholder="user name or email" id="usernameoremail" class="input col-sm-6"><br>
+
+
+
+                <input type="password" name="password" placeholder="password" id="password2" class="input col-sm-6"><br>
+
+                <input type="text" id="captchatext2" readonly class="output col-sm-6"><br>
+                <input type="button" class="btn btn-warning col-sm-3" onclick="create_captcha()" value="Refresh"><br>
+
+                <input type="text" placeholder="enter captcha" id="entercaptch2" class="input col-sm-6"><br>
+                <p id="captchaerror2" class="error col-sm-12">The code entered is incorrect</p>
+
+
+                <input type="button" class="btn btn-primary col-sm-3" onclick="rigister_block()" value="Rigister">
+                <input type="button" class="btn btn-success col-sm-3" onclick="login()" value="Sing in"><br>
+                <input type="button" class=" btn btn-danger col-sm-3" onclick="cancel()" value="Cancel">
+            </form>
+        </div>
+        <div class="jumbotron text-center row" id="loginres">
+            <h1 class="col-sm-12">Welcome</h1>
+        </div>
+        <div class="row" id="footer">
+            <p class="col-sm-12"> copyright 2020 &copy; <a href="http://www.bwrs.ir/" target="_blank">Borna</a></p>
+        </div>
+        <div class="row">
+            <img src="img/arm-300x234.png" alt="arm" class="col-sm-3">
+        </div>
+    </div>
+</body>
+
+</html>

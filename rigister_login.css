@@ -1,0 +1,72 @@
+@font-face {
+    src: url("font/JOKERMAN.TTF");
+    font-family: captcha;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient( rgba(17, 166, 84, 0.9) 10%, rgba(17, 166, 84, 0.8) 20%, rgba(17, 166, 84, 0.7) 30%, rgba(17, 166, 84, 0.6) 40%, rgba(17, 166, 84, 0.5) 50%, rgba(17, 166, 84, 0.4) 60%, rgba(17, 166, 84, 0.3) 70%, rgba(17, 166, 84, 0.2) 80%, rgba(17, 166, 84, 0.1) 90%, rgba(17, 166, 84, 0) 100%);
+}
+
+.row {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+#imgdiv {
+    margin: 0;
+    padding: 0;
+}
+
+#img {
+    border-radius: 0 0 30px 30px;
+}
+
+.btn {
+    margin: 5px 2px;
+    max-width: 100px;
+}
+
+.input,
+.output {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.output {
+    border: none;
+    outline: none;
+    background-color: darkgrey;
+    font-family: captcha;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: line-through;
+    text-decoration-style: wavy;
+}
+
+.output::selection {
+    background-color: initial;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 15px;
+}
+
+.jumbotron {
+    display: none;
+}
+
+#navbar {
+    display: none;
+}
+
+#rigisterForm {
+    display: none;
+}
